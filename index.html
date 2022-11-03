@@ -1,0 +1,59 @@
+<!--
+Hannah Guillen, UMass Lowell Computer Science
+  hannah_guillen@student.uml.edu, hguillen@cs.uml.edu
+Date: November 1, 2022
+File: index.html
+GUI Assignment: Creating an Interactive Dynamic Table
+  This file is the main HTML page.
+
+Copyright (c) 2022 by Hannah Guillen. All rights reserved. May be freely
+copied or excerpted for educational purposes with credit to the author.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+
+  <title>Interactive Dynamic Table</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <!-- TITLE/ HEADER -->
+  <div class ="header">
+    <h1>Interactive Dynamic Table</h1>
+  </div>
+
+  <form onsubmit="genTable()">
+    <h4>Please enter values for table:</h4>
+    <div class="tableInputs">
+        <div class="input">
+          <label>Minimum Column Value</label>
+          <input type="text" name="name" id="min_c" required>
+        </div>
+        <div class="input">
+          <label>Maximum Column Value</label>
+          <input type="text" id="max_c" required>
+        </div>
+        <div class="input">
+          <label>Minimum Row Value</label>
+          <input type="text" id="min_r" required>
+        </div>
+        <div class="input">
+          <label>Maximum Row Value</label>
+          <input type="text" id="max_r" required>
+        </div>
+    </div>
+    <input type="submit" value="Generate" id="generate">
+  </form>
+  <div id="tableBox">
+  </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
